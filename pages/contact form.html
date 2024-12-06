@@ -8,61 +8,79 @@
   <link rel="stylesheet" href="/assets/styles/styles.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/index.html">Priyansh Patel</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="/pages/resume.html">Resume</a></li>
-          <li class="nav-item"><a class="nav-link" href="/pages/projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="/pages/contact form.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="/pages/resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="/pages/projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="/pages/contact form.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="/pages/Lego project.html">Lego Project</a></li>
+
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Contact Form -->
   <div class="container mt-5">
     <h1 class="text-center">Contact Me</h1>
-    <p class="text-center text-muted">Feel free to reach out to me via the form below!</p>
-    <form class="mx-auto mt-4" style="max-width: 600px;">
-      <div class="mb-3">
-        <label for="firstName" class="form-label">First Name</label>
-        <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+    <div class="row">
+      <div class="col-lg-8 col-md-7 mx-auto">
+        <form class="mt-4">
+          <div class="mb-3">
+            <label class="form-label">*First Name: </label>
+            <input type="text" class="form-control" id="FName" placeholder="Enter your first name">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">*Last Name: </label>
+            <input type="text" class="form-control" id="LName" placeholder="Enter your last name">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">*Email Address: </label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Phone: </label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">*Message: </label>
+            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
       </div>
-      <div class="mb-3">
-        <label for="lastName" class="form-label">Last Name</label>
-        <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+
+      <div class="col-lg-4 col-md-5 mx-auto mt-5 mt-md-0">
+        <div class="card shadow">
+          <div class="card-body">
+            <h4 class="card-title text-center">My Contact Information</h4>
+            <p class="card-text">
+              <li>Email:</strong> 
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=patel7py@mail.uc.edu" class="text-primary">patel7py@mail.uc.edu</a>
+              </li>
+              
+              <li>Phone:</strong> <a href="513-570-3010" class="text-primary">513-570-3010</a><br>
+            </p>
+            <p class="card-text text-center">
+              <li>Social Media:</li><br>
+              <a href="https://github.com/priyanshpatel9" class="text-dark me-2"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://linkedin.com/in/priyansh-patel-25814526b" class="text-dark"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Email Address</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-      </div>
-      <button type="submit" class="btn btn-primary w-100">Submit</button>
-    </form>
+    </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="text-center py-3 mt-5">
-    <p>&copy; 2024 Priyansh Patel IT2040</p>
+  <footer class="text-center py-3 mt-5 bg-primary text-white">
+    <p>&copy; Priyansh Patel IT2040 | Contact</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script>
-    // Capture form submission and log data to the console
-    document.querySelector("form").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const firstName = document.getElementById("firstName").value;
-      const lastName = document.getElementById("lastName").value;
-      const email = document.getElementById("email").value;
-      console.log(`Name: ${firstName} ${lastName}, Email: ${email}`);
-      alert(`Thank you, ${firstName}! Your message has been received.`);
-    });
-  </script>
 </body>
 </html>
